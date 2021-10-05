@@ -9,7 +9,7 @@
 We will be conducting an in depth analysis of Airbnb listings in Toronto. Why Toronto you ask? Well, it is a cool place to live and to explore. We wanted to focus on a Canadian city, and why not explore the home of the Raptors and the Blue Jays. The Airbnb market is interesting and eclectic, with many different stays and neighbourhoods. 
 
 
-# About our Dataset :
+## About our Dataset :
 
 - Who: Our data was provided by Inside Airbnb. These guys and gals sourced the data from publicly available information from the Airbnb site.
 
