@@ -17,7 +17,7 @@ We will be conducting an in depth analysis of Airbnb listings in Toronto. Why To
 
 - When: The data was collected August 6, 2021 for listings that appeared the month of July, 2021.
 
-- Why: We are just curious about Toronto and the AirBnb listing details in the city. 
+- Why: We are just curious about Toronto and the Airbnb listing details in the city. 
 
 - How: The data was collected by Inside Airbnb, which is a mission driven activist project. Their goal is to provide data which puts into focus the impact of short-term rentals on housing / residential communities. They want to protect cities from adverse effects of short-term rentals. They verify, clease, analyse, and aggrgate the data themselves. 
 
