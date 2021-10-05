@@ -9,7 +9,7 @@
 We will be conducting an in depth analysis of Airbnb listings in Toronto. Why Toronto you ask? Well, it is a cool place to live and to explore. We wanted to focus on a Canadian city, and why not explore the home of the Raptors and the Blue Jays. The AirBnb market is interesting and eclectic, with many different stays and neighbourhoods. 
 
 
-# About our Dataset
+## About our Dataset :
 
 - Who: Our data was provided by Inside AirBnb. These guys and gals sourced the data from publicly available information from the Airbnb site.
 
@@ -25,7 +25,7 @@ We will be conducting an in depth analysis of Airbnb listings in Toronto. Why To
 
 - Purpose of analytical project: Although the columns of data by itself may seem rather basic and straighforward, trying to find a relationship between sets of data can provide a better understanding.
 
-- Research questions: Compare ratings between super hosts and normal hosts. How does the neighborhood influences the price of the listings? How does the price and accommodation size relationship affect the review score?
+- Research questions: How do ratings compare between super hosts and normal hosts? How does the neighborhood influence the price of the listings? How does the price and accommodation size relationship affect the review score?
 
 
 ## Team Members
