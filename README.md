@@ -1,5 +1,5 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5845825&assignment_repo_type=AssignmentRepo)
-# Group 11 - {Detailed Analysis of AirBnb Listing Data}
+# Group 11 - Detailed Analysis of AirBnb Listing Data
 
 - This title will definitely change over time.
 
@@ -12,7 +12,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project) or 
 We will be conducting an in depth analysis of Airbnb listings in Toronto. Why Toronto you ask? Well, it is a cool place to live and to explore. We wanted to focus on a Canadian city, and why not explore the home of the Raptors and the Blue Jays. The AirBnb market is interesting and eclectic, with many different stays and neighbourhoods. 
 
 
-## Describe your dataset in about 150-200 words
+# About our Dataset
 
 - Who: Our data was provided by Inside AirBnb. These guys and gals sourced the data from publicly available information from the Airbnb site.
 
