@@ -3,9 +3,6 @@
 
 - This title will definitely change over time.
 
-## Milestones
-
-Details for Milestone are available on Canvas (left sidebar, Course Project) or [here](https://firas.moosvi.com/courses/data301/project/milestone01.html).
 
 ## Topic of study :
 
