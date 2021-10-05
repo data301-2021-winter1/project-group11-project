@@ -28,7 +28,7 @@ We will be conducting an in depth analysis of Airbnb listings in Toronto. Why To
 
 - Purpose of analytical project: Although the columns of data by itself may seem rather basic and straighforward, trying to find a relationship between sets of data can provide a better understanding.
 - Reason of interest:
-- Research questions:
+- Research questions: Compare ratings between super hosts and normal hosts. How does the neighborhood influences the price of the listings? How does the price and accommodation size relationship affect the review score?
 
 
 ## Team Members
