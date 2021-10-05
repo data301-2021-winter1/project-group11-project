@@ -1,35 +1,47 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5845825&assignment_repo_type=AssignmentRepo)
-# Group YYY - {Short snappy Title of your project}
+# Group 11 - {Detailed Analysis of AirBnb Listing Data}
 
-- Your title can change over time.
+- This title will definitely change over time.
 
 ## Milestones
 
 Details for Milestone are available on Canvas (left sidebar, Course Project) or [here](https://firas.moosvi.com/courses/data301/project/milestone01.html).
 
-## Describe your topic/interest in about 150-200 words
+## Topic of study :
 
-{Add your stuff here}
+We will be conducting an in depth analysis of Airbnb listings in Toronto. Why Toronto you ask? Well, it is a cool place to live and to explore. We wanted to focus on a Canadian city, and why not explore the home of the Raptors and the Blue Jays. The AirBnb market is interesting and eclectic, with many different stays and neighbourhoods. 
+
 
 ## Describe your dataset in about 150-200 words
 
-{Add your stuff here}
+- Who: Our data was provided by Inside AirBnb. These guys and gals sourced the data from publicly available information from the Airbnb site.
+
+- What: This data is rich. We have 15084 listings, with details about : overall description, neighbourhood, hosts, host location, host response rates, superhosts, property type, # of bathrooms, # of bedrooms, # of beds, amenities, price, ratings, and reviews. 
+
+- When: The data was collected August 6, 2021 for listings that appeared the month of July, 2021.
+- Why: We are just curious about Toronto and the AirBnb listing details in the city. 
+
+- How: The data was collected by Inside AirBnb, which is a mission driven activist project. Their goal is to provide data which puts into focus the impact of short-term rentals on housing / residential communities. They want to protect cities from adverse effects of short-term rentals. They verify, clease, analyse, and aggrgate the data themselves. 
 
 ## Team Members
 
-- Person 1: one sentence about you!
-- Person 2: one sentence about you!
-- Person 3: one sentence about you!
+- Sai Rohith Enumala : Loves the snow, currently in India but migrating West soon!
+- Joanna Brown : Olympian, but not an olympic coder, yet.
+- Joseph Chew Zi Xuan : Starts producing his best work at 11pm.
 
-## Images
+## What a beautiful city.
 
-{You can use this area for any images you want to include}
 
-<img src ="images/test.png" width="100px">
+
+![cn tower](https://www.konnecthq.com/wp-content/uploads/2019/07/CN-Tower-31-12-1.jpg)
+
+![toronto sigh](https://www.netnewsledger.com/wp-content/uploads/2021/03/Toronto-Marks-COVID-Deaths.jpg)
+
 
 ## References
 
-{Add your stuff here}
+Inside Airbnb http://insideairbnb.com/about.html
 
+Inside Airbnb Data http://insideairbnb.com/get-the-data.html
 
 
