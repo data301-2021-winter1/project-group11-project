@@ -21,14 +21,14 @@ We will be conducting an in depth analysis of Airbnb listings in Toronto. Why To
 
 - How: The data was collected by Inside Airbnb, which is a mission driven activist project. Their goal is to provide data which puts into focus the impact of short-term rentals on housing / residential communities. They want to protect cities from adverse effects of short-term rentals. They verify, clease, analyse, and aggrgate the data themselves. 
 
-# Topic/interest in this dataset 
+## Topic/interest in this dataset :
 
 - Purpose of analytical project: Although the columns of data by itself may seem rather basic and straighforward, trying to find a relationship between sets of data can provide a better understanding.
 - Reason of interest: Especially during covid where travel restrictions were high, people were bounded domestically. Airbnbs are of interest for those who love to travel and explore.
 - Research questions: How do ratings compare between super hosts and normal hosts? How does the neighborhood influence the price of the listings? How does the price and accommodation size relationship affect the review score?
 
 
-## Team Members
+## Team Members :
 
 - Sai Rohith Enumala : Loves the snow, currently in India but migrating West soon!
 - Joanna Brown : Olympian, but not an olympic coder, yet.
