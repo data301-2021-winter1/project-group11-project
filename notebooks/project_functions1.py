@@ -7,14 +7,14 @@ def unprocessed(csv_file):
 
 def load(csv_file):
     df = pd.read_csv(csv_file)
-    df1=(df[['id', 'host_id', 'host_is_superhost', 'accommodates', 'review_scores_cleanliness', 'price'   ]]
+    df1=(df[["id", 'name', 'host_id', 'host_name', 'host_is_superhost','price','review_scores_cleanliness','accommodates'  ]]
          .sort_values("review_scores_cleanliness",ascending=False, ignore_index=True)
         )
     clean = df1[['host_is_superhost','review_scores_cleanliness']]
     clean =  clean[clean['review_scores_cleanliness'].notna()]
     price = df1[['host_is_superhost', 'accommodates', 'price']]
     
-    return (clean,price)
+    return (df1,clean,price)
 
 def process_clean(df):
     clean = df
