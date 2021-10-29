@@ -10,11 +10,11 @@ def load(csv_file):
     df1=(df[["id", 'name', 'host_id', 'host_name', 'host_is_superhost','price','review_scores_cleanliness','accommodates'  ]]
          .sort_values("review_scores_cleanliness",ascending=False, ignore_index=True)
         )
-    clean = df1[['host_is_superhost','review_scores_cleanliness']]
-    clean =  clean[clean['review_scores_cleanliness'].notna()]
+    clean =  df1[['host_is_superhost','review_scores_cleanliness']]
+    temp =     clean[clean['review_scores_cleanliness'].notna()] 
     price = df1[['host_is_superhost', 'accommodates', 'price']]
     
-    return (df1,clean,price)
+    return (df1,temp,price)
 
 def process_clean(df):
     clean = df
@@ -25,7 +25,6 @@ def process_clean(df):
 
 def process_price(df):
     pr = df
-    
     pr['price'] = pr['price'].str.replace('$','')
     pr['price'] = pr['price'].str.replace(',','')
     pr['price'] = pr.price.astype(float)
