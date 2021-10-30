@@ -40,11 +40,12 @@ def process_price(df):
 def wrang_clean(df):
     remaned = df.rename(columns = {"host_is_superhost":"Is_Super_Host","review_scores_cleanliness":"mean of cleanliness score" })
     remaned['Is_Super_Host'] = remaned.Is_Super_Host.replace({'t':'Super host', 'f':'normal host'})
+    # The above line of code is extracted from https://www.kite.com/python/answers/how-to-replace-column-values-in-a-pandas-dataframe-in-python#:~:text=Access%20a%20specific%20pandas.,old%20values%20to%20new%20values.
     return remaned
     
 def wrang_price(df):
     remaned = df.rename(columns = {'price' :"mean of the prices"})
     remaned['host_is_superhost'] = remaned.host_is_superhost.replace({'t':'Super host', 'f':'normal host'})
-
+    # The above line of code is extracted from https://www.kite.com/python/answers/how-to-replace-column-values-in-a-pandas-dataframe-in-python#:~:text=Access%20a%20specific%20pandas.,old%20values%20to%20new%20values.
     return remaned
     
