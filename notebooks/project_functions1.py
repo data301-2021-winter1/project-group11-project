@@ -25,21 +25,21 @@ def process_clean(df):
 
 def process_price(df):
     pr = df
-    pr['price'] = ( pr['price']
-                    .str.replace('$','')
-                    .str.replace(',','')
-                    .astype(float) )
-    price_processed = (pr
-                         .groupby(["host_is_superhost","accommodates"],as_index=False)
-                         .mean()
-                         .drop(price_processed[price_processed['price']==0].index, inplace=True) )
+    pr['price'] = pr['price'].str.replace('$','')
+    pr['price'] = pr['price'].str.replace(',','') 
+    pr['price'] = pr['price'].astype(float)
+    price_processed = (pr.groupby(["host_is_superhost","accommodates"],as_index=False).mean() )
+    price_processed.drop(price_processed[price_processed['price']==0].index, inplace=True)
     return price_processed
 
 def wrang_clean(df):
-    remaned = df.rename(columns = {"host_is_superhost":"Host is Super Host?","review_scores_cleanliness":"mean of cleanliness score" })
+    remaned = df.rename(columns = {"host_is_superhost":"Is_Super_Host","review_scores_cleanliness":"mean of cleanliness score" })
+    remaned['Is_Super_Host'] = remaned.Is_Super_Host.replace({'t':'Super host', 'f':'normal host'})
     return remaned
     
 def wrang_price(df):
     remaned = df.rename(columns = {'price' :"mean of the prices"})
+    remaned['host_is_superhost'] = remaned.host_is_superhost.replace({'t':'Super host', 'f':'normal host'})
+
     return remaned
     
