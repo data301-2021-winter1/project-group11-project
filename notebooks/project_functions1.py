@@ -25,11 +25,14 @@ def process_clean(df):
 
 def process_price(df):
     pr = df
-    pr['price'] = pr['price'].str.replace('$','')
-    pr['price'] = pr['price'].str.replace(',','')
-    pr['price'] = pr.price.astype(float)
-    price_processed = pr.groupby(["host_is_superhost","accommodates"],as_index=False).mean()
-    price_processed.drop(price_processed[price_processed['price']==0].index, inplace=True)
+    pr['price'] = ( pr['price']
+                    .str.replace('$','')
+                    .str.replace(',','')
+                    .astype(float) )
+    price_processed = (pr
+                         .groupby(["host_is_superhost","accommodates"],as_index=False)
+                         .mean()
+                         .drop(price_processed[price_processed['price']==0].index, inplace=True) )
     return price_processed
 
 def wrang_clean(df):
