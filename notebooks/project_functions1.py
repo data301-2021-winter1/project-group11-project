@@ -11,24 +11,29 @@ def load(csv_file):
          .sort_values("review_scores_cleanliness",ascending=False, ignore_index=True)
         )
     clean =  df1[['host_is_superhost','review_scores_cleanliness']]
-    temp =     clean[clean['review_scores_cleanliness'].notna()] 
-    price = df1[['host_is_superhost', 'accommodates', 'price']]
-    
-    return (df1,temp,price)
+    temp_clean = clean[clean['review_scores_cleanliness'].notna()]
+    temp_clean= clean[clean['host_is_superhost'].notna()]
+    pr = df1[['host_is_superhost', 'accommodates', 'price']]
+    price_temp = pr[pr['host_is_superhost'].notna()]
+    return (df1,temp_clean,price_temp)
 
 def process_clean(df):
     clean = df
-    cleanmean = (clean.groupby("host_is_superhost", as_index=False)
-                 .mean()
+    cleanmean = (clean
+                  .groupby("host_is_superhost", as_index=False)
+                  .mean()
                  )  
     return cleanmean
 
 def process_price(df):
     pr = df
-    pr['price'] = pr['price'].str.replace('$','')
-    pr['price'] = pr['price'].str.replace(',','') 
-    pr['price'] = pr['price'].astype(float)
-    price_processed = (pr.groupby(["host_is_superhost","accommodates"],as_index=False).mean() )
+    pr['price'] =  (  pr['price']
+                      .str.replace('$','')
+                     .str.replace(',','') 
+                     .astype(float) )
+    price_processed = (  pr
+                         .groupby(["host_is_superhost","accommodates"],as_index=False)
+                        .mean() )
     price_processed.drop(price_processed[price_processed['price']==0].index, inplace=True)
     return price_processed
 
