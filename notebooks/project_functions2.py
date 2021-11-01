@@ -2,14 +2,27 @@ import pandas as pd
 import numpy as np
 
 def unprocessed(csv_file):
-    df_unp = pd.read_csv(csv_file)
-    return df_unp
-
-
-def load_and_process(csv_file):
-    df_unp = pd.read_csv(csv_file)
-    df = df_unp.drop(['neighbourhood_group_cleansed', 'license', 'calendar_updated', 'bathrooms'], axis=1, inplace=True)    
+    df = pd.read_csv(csv_file)
     return df
+
+# Drop columns with missing values
+def drop_empty(df):
+    #df = pd.read_csv(csv_file)
+    df = df.drop(['neighbourhood_group_cleansed', 'license', 'calendar_updated', 'bathrooms'], axis=1, inplace=True)    
+             
+    return df
+
+# Rename columns we will be working with
+def rename_columns(df):
+    df1 = df.rename(columns={"review_scores_communication":"Reviews Scores Communication",
+                  "reviews_per_month": "Reviews per Month",
+                   "host_response_rate": "Host Response Rate",
+                   "host_acceptance_rate": "Host Acceptance Rate",
+                   'review_scores_accuracy': "Review Scores Accuracy",
+                   "review_scores_checkin": "Review Scores Checkin",
+                   "review_scores_location": "Review Scores Location",
+                    "review_scores_value": "Review Scores Value"})
+    return df1
 
 
 #adapted from https://github.com/jsprovost1/Airbnb_EDA/blob/master/Airbnb_Seattle.ipynb
@@ -31,7 +44,6 @@ def replace_characters(main_string, chars, new_string):
         except:
             continue       
     return main_string
-
 
 
 
@@ -86,21 +98,8 @@ def numeric_set(df):
     return df.drop(columns=drop_columns)._get_numeric_data()
 
 
-# adapted from ...
-#def split_host(df):
-#    """
-#        split listings into two categories : whether host is superhost or not(regular host)
-#    """
-#    superhosts = df[df.Host is Superhost == 't']
-#    regularhosts = df[df.Host is Superhost == 'f']
-    
-#    return superhosts, regularhosts
 
-#superhosts, regularhosts = split_host("../data/raw/listings.csv")
-
-
-# adapted from ...
-def split_host(df=pd.read_csv ("../data/raw/listings.csv")): #=pd.read_csv ("../data/raw/listings.csv")
+def split_host(df=pd.read_csv ("../data/raw/listings.csv")): 
     """
         split listings into two categories : whether host is superhost or not(regular host)
     """
@@ -139,7 +138,6 @@ def get_num_mean_hosts(superhosts_num, regularhosts_num):
 
 
 
-
 def plot_numeric_mean_by_host(numeric_mean_by_hosts):
     """
         Convert average values for each category into ratio (for superhost and normal hosts). 
@@ -149,12 +147,4 @@ def plot_numeric_mean_by_host(numeric_mean_by_hosts):
     proportions.plot(kind='barh', stacked='true', figsize=(10, 10), title = 'Comparison Metrics for Regular host vs Superhost')
     
     
-    
-    
-def get_host_since_year(df):
-    return df.host_since.str.split("-", expand=True)[0].astype(int)    
 
-
-def plot_hist_host_since(df, title):
-    df.plot.hist(bins=len(df.value_counts()), title=title)
- 
