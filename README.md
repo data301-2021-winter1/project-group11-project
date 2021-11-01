@@ -1,7 +1,6 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5845825&assignment_repo_type=AssignmentRepo)
 # Group 11 - Detailed Analysis of Airbnb Listing Data
 
-- This title will definitely change over time.
 
 
 ## Topic of study :
@@ -28,7 +27,7 @@ We will be conducting an in depth analysis of Airbnb listings in Toronto. Why To
 - Research questions: 
   1. Whether the category of hosts have an impact on the prices of the listings, based on the number of people it accomodates.
   2. On average, which of the two categories of hosts tends to keep the property (listing) clean, based on the cleanliness reviews by the customers?
-  3. How do review scores compare between super hosts and normal hosts? 
+  3. How do review scores compare between superhosts and normal hosts? Do superhosts respond faster? Can superhosts charge more for their listings?
   4. How does the price and accommodation size relationship affect the review score?
 
 
