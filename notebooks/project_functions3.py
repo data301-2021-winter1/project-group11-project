@@ -67,18 +67,6 @@ def rmissingvaluecol(df, threshold):
     print("Columns:\n", list(set(list((df.columns.values))) - set(l)))
     return l
 
-def clean_price(df):
-    temp_clean = df
-    clean_price = temp_clean[['price','review_scores_rating']]
-    pricemean = clean_price.groupby("price", as_index=False).mean()
-    return pricemean
-
-def clean_accommodates(df):
-    temp_accom = df
-    clean_accom = temp_clean[['accommodates','review_scores_rating']]
-    accommean = clean_accom.groupby('accommodates', as_index=True).mean()
-    return accommean
-
 def price_per_person_all(df):
     df = cleanall(df)
     df['price_per_person'] = df['price']/df['accommodates']
@@ -89,10 +77,6 @@ def price_per_person_final(df):
     df['price_per_person'] = df['price']/df['accommodates']
     return df
 
-#'review_scores_rating','review_scores_value','review_scores_accuracy',
-#       'review_scores_cleanliness', 'review_scores_checkin',
-#       'review_scores_communication', 'review_scores_location'
-        
 def ppp_rs_all(df):
     answers = []
     for i in range(20):
@@ -105,8 +89,14 @@ def ppp_rs_all(df):
         m3 = r["review_scores_accuracy"].mean()
         m4 = r["review_scores_cleanliness"].mean()
         m5 = r["review_scores_checkin"].mean()
-        answers.append([m1, m2, m3, m4, m5])
-    df = pd.DataFrame(answers, columns=["mean_review_scores_rating","mean_review_scores_value","mean_review_scores_accuracy","mean_review_scores_cleanliness","mean_review_scores_checkin"])
+        m6 = r["review_scores_communication"].mean()
+        m7 = r["review_scores_location"].mean()
+        answers.append([m1, m2, m3, m4, m5, m6, m7])
+    df = pd.DataFrame(answers, columns=["mean_review_scores_rating","mean_review_scores_value","mean_review_scores_accuracy","mean_review_scores_cleanliness","mean_review_scores_checkin","mean_review_scores_communication", "mean_review_scores_location"])
+    for i in range(20):
+        a = i*5
+        b = a+5
+        df = df.rename(index={i:str(a)+'-'+str(b)})
     return df
 
 def ppp_rs(df):
@@ -119,6 +109,10 @@ def ppp_rs(df):
         m = r["review_scores_rating"].mean()
         answers.append(m)
     df = pd.DataFrame(answers, columns=["mean_review_scores_rating"])
+    for i in range(20):
+        a = i*5
+        b = a+5
+        df = df.rename(index={i:str(a)+'-'+str(b)})
     return df
 
 def rename(df):
@@ -137,6 +131,10 @@ def p_rs(df):
         m = r["review_scores_rating"].mean()
         answers.append(m)
     df = pd.DataFrame(answers, columns=["mean_review_scores_rating"])
+    for i in range(20):
+        a = i*5
+        b = a+5
+        df = df.rename(index={i:str(a)+'-'+str(b)})
     return df       
 
 def a_rs(df):
@@ -152,13 +150,6 @@ def a_rs(df):
     return temp_clean      
                    
                    
-    
-
-#for i in range(20):
-#        a = i*5
-#        b = a+5
-#        mr = df.rename(index={i:a+'-'+b})
-
 #https://thispointer.com/python-find-indexes-of-an-element-in-pandas-dataframe/
 def getIndexes(dfObj, value):
     ''' Get index positions of value in dataframe i.e. dfObj.'''
