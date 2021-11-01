@@ -7,7 +7,6 @@ def unprocessed(csv_file):
 
 # Drop columns with missing values
 def drop_empty(df):
-    #df = pd.read_csv(csv_file)
     df = df.drop(['neighbourhood_group_cleansed', 'license', 'calendar_updated', 'bathrooms'], axis=1, inplace=True)    
              
     return df
