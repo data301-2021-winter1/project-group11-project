@@ -79,9 +79,9 @@ def price_per_person_final(df):
 
 def ppp_rs_all(df):
     answers = []
-    for i in range(20):
-        a = i*5
-        b = a+5
+    for i in range(50):
+        a = i*20
+        b = a+20
         r = df[(df["price_per_person"]>a) ]
         r = r[(r["price_per_person"]<b) ]
         m1 = r["review_scores_rating"].mean()
@@ -93,25 +93,25 @@ def ppp_rs_all(df):
         m7 = r["review_scores_location"].mean()
         answers.append([m1, m2, m3, m4, m5, m6, m7])
     df = pd.DataFrame(answers, columns=["mean_review_scores_rating","mean_review_scores_value","mean_review_scores_accuracy","mean_review_scores_cleanliness","mean_review_scores_checkin","mean_review_scores_communication", "mean_review_scores_location"])
-    for i in range(20):
-        a = i*5
-        b = a+5
+    for i in range(50):
+        a = i*20
+        b = a+20
         df = df.rename(index={i:str(a)+'-'+str(b)})
     return df
 
 def ppp_rs(df):
     answers = []
-    for i in range(20):
-        a = i*5
-        b = a+5
+    for i in range(50):
+        a = i*20
+        b = a+20
         r = df[(df["price_per_person"]>a) ]
         r = r[(r["price_per_person"]<b) ]
         m = r["review_scores_rating"].mean()
         answers.append(m)
     df = pd.DataFrame(answers, columns=["mean_review_scores_rating"])
-    for i in range(20):
-        a = i*5
-        b = a+5
+    for i in range(50):
+        a = i*20
+        b = a+20
         df = df.rename(index={i:str(a)+'-'+str(b)})
     return df
 
@@ -123,17 +123,17 @@ def rename(df):
     
 def p_rs(df):
     answers = []
-    for i in range(20):
-        a = i*50
-        b = a+50
+    for i in range(50):
+        a = i*20
+        b = a+20
         r = df[(df["price"]>a) ]
         r = r[(r["price"]<b) ]
         m = r["review_scores_rating"].mean()
         answers.append(m)
     df = pd.DataFrame(answers, columns=["mean_review_scores_rating"])
-    for i in range(20):
-        a = i*5
-        b = a+5
+    for i in range(50):
+        a = i*20
+        b = a+20
         df = df.rename(index={i:str(a)+'-'+str(b)})
     return df       
 
