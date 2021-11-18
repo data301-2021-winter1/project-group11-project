@@ -1,3 +1,3 @@
 # Dashboard folder
 
-- This folder should contain all the information and files needed for the Tableau Dashboard
+- This folder contain all the information and files  related to Tableau Dashboard
